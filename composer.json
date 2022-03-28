@@ -7,9 +7,16 @@
         "php": "^8.0",
         "laravel/framework": "^8.0|^9.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
     "autoload": {
         "psr-4": {
             "Heseya\\Pagination\\": "src/",
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Heseya\\Pagination\\Tests\\": "tests/"
         }
     },
