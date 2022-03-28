@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+use Illuminate\Support\Env;
+
 return [
 
     /*
@@ -10,7 +14,7 @@ return [
     | Key you use in url to set pagination limit.
     |
     */
-    'limit_key' => env('PAGINATION_LIMIT_KEY', 'limit'),
+    'limit_key' => Env::get('PAGINATION_LIMIT_KEY', 'limit'),
 
     /*
     |--------------------------------------------------------------------------
@@ -20,7 +24,7 @@ return [
     | Default pagination limit, when no pagination was found in request.
     |
     */
-    'per_page' => (int) env('PAGINATION_DEFAULT', 24),
+    'per_page' => (int) Env::get('PAGINATION_DEFAULT', 24),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,6 +34,6 @@ return [
     | Max pagination limit.
     |
     */
-    'max' => (int) env('PAGINATION_MAX', 500),
+    'max' => (int) Env::get('PAGINATION_MAX', 500),
 
 ];

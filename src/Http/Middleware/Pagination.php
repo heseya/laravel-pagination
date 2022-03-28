@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Heseya\Pagination\Http\Middleware;
 
 use App\Exceptions\StoreException;
@@ -26,7 +28,7 @@ class Pagination
                 throw new StoreException($validator->errors()->first());
             }
 
-            Config::set('pagination.per_page', $request->input($limit));
+            Config::set('pagination.per_page', (int) $request->input($limit));
         }
 
         return $next($request);

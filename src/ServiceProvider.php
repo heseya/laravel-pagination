@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Heseya\Pagination;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
