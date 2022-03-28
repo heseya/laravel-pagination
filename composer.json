@@ -9,7 +9,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Heseya\\Pagination\\": "src/",
+            "Heseya\\Pagination\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Heseya\\Pagination\\Tests\\": "tests/"
         }
     },
