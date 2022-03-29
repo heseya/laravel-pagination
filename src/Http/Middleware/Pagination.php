@@ -17,7 +17,7 @@ class Pagination
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        $limit = Config::get('limit_key');
+        $limit = Config::get('pagination.limit_key');
 
         if ($request->exists($limit)) {
             $validator = Validator::make($request->only($limit), [
